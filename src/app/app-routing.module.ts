@@ -8,7 +8,7 @@ const routes: Routes = [
 
   { path: '', component: PostListComponent },
   { path: 'create', component: PostCreateComponent },
-
+  { path: 'edit/:postId', component: PostCreateComponent },
 ];
 
 
@@ -19,7 +19,6 @@ const routes: Routes = [
 
 })
 export class AppRoutingModule {
-
 
 
 
