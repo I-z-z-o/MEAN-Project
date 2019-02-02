@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
 const postsRoutes = require("./routes/posts");
 
+const path = require("path");
 
 
 const app = express();
@@ -23,6 +24,9 @@ console.log('Connection to Database failed!')
 app.use(bodyParser.json());
 
 
+app.use("/images", express.static(path.join("backend/images")));
+
+
 app.use((req, res, next) => {
 
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -32,6 +36,8 @@ app.use((req, res, next) => {
 
 
 });
+
+
 
 
 app.use("/api/posts", postsRoutes);
