@@ -21,3 +21,10 @@ color: white;
   flex: 1 1 auto;
 
 }
+
+ul {
+
+
+  display: flex;
+
+}
